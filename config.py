@@ -2,8 +2,10 @@ import os
 import logging
 from logging.handlers import RotatingFileHandler
 
+
+
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6874224112:AAErSYSg7bJsfQdOEWan7WAddmYAY2Xy5XM")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6539256574:AAGeLhRA6RT1nQiqKkYNMFVMZloKS8pP_k8")
 
 #Your API ID from my.telegram.org
 APP_ID = int(os.environ.get("APP_ID", "20053544"))
@@ -12,7 +14,7 @@ APP_ID = int(os.environ.get("APP_ID", "20053544"))
 API_HASH = os.environ.get("API_HASH", "f26c4d28081c11e0c48707143f7bb5b1")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002073430527"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002103959438"))
 
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "1439022100"))
@@ -43,6 +45,9 @@ FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
+
+#set True if you want to prevent users from forwarding files from bot
+PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "True") == "True" else False
 
 #Set true if you want Disable your Channel Posts Share button
 if os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True':
